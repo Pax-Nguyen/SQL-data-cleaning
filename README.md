@@ -7,7 +7,7 @@ SQL console:
 
     -- club_member_info definition
 
-    CREATE TABLE club_member_info (
+    CREATE TABLE club_member_info_cleaned (
 	    full_name VARCHAR(50),
 	    age INTEGER,
 	    martial_status VARCHAR(50),
