@@ -16,7 +16,7 @@ Let's inspect the initial rows to analyze the data in its original format.
 |mendie alexandrescu|46|single|malexandrescu8@state.gov|504-918-4753|34 Delladonna Terrace,New Orleans,Louisiana|Systems Administrator III|3/12/1921|
 | fey kloss|52|married|fkloss9@godaddy.com|808-177-0318|8976 Jackson Park,Honolulu,Hawaii|Chemical Engineer|11/5/2014|
 
-## Copy the table (Underline)
+## Copy the table
 
 ### Create a new table for cleaning 
 
