@@ -39,3 +39,16 @@ Let's generate a new table where we can manipulate and restructure the data with
 
     INSERT INTO club_member_info_cleaned
     SELECT * FROM club_member_info;
+
+## Data format
+
+### Adjust full name column into correct format
+
+#### Cleaning whitespace
+    UPDATE club_member_info_cleaned 
+    SET full_name = TRIM(full_name);
+
+#### Upper full name
+    UPDATE club_member_info_cleaned 
+    SET full_name = UPPER(full_name);
+    
