@@ -40,15 +40,38 @@ Let's generate a new table where we can manipulate and restructure the data with
     INSERT INTO club_member_info_cleaned
     SELECT * FROM club_member_info;
 
-## Data format
+## Data cleaning
 
-### Adjust full name column into correct format
+### 'full_name' column
 
 #### Cleaning whitespace
+
     UPDATE club_member_info_cleaned 
     SET full_name = TRIM(full_name);
 
 #### Upper full name
+
     UPDATE club_member_info_cleaned 
     SET full_name = UPPER(full_name);
     
+#### 'age' column
+
+#### Find ages out of the realistic range
+
+    select *
+    from club_member_info_cleaned
+    where age > 100;
+
+#### Find the average age to replace the outlier age
+
+    select AVG(age) 
+    from club_member_info_cleaned
+    where age <= 100;
+
+  The result is: 42
+
+#### Replace the ages out the the realistic range or empty cells by the average age
+
+    UPDATE club_member_info_cleaned 
+    SET age = 42
+    WHERE age > 100;
