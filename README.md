@@ -54,7 +54,7 @@ Let's generate a new table where we can manipulate and restructure the data with
     UPDATE club_member_info_cleaned 
     SET full_name = UPPER(full_name);
     
-### 'age' column
+- ### 'age' column
 
 #### Find ages out of the realistic range
 
@@ -76,7 +76,7 @@ Let's generate a new table where we can manipulate and restructure the data with
     SET age = 42
     WHERE age > 100;
 
-### 'martial_status' column
+- ### 'martial_status' column
 
 #### Check the frequency of the martial status
 
@@ -109,7 +109,7 @@ we can see that:
     SET martial_status = 'married'
     WHERE martial_status = "";
 
-### 'email' column
+- ### 'email' column
 
 #### Check if there is any email in wrong format
 
@@ -119,7 +119,7 @@ we can see that:
 
 The result is that there is no email in wrong format, so "email" column is okay.
 
-### 'phone' column
+- ### 'phone' column
 
 #### Check whether there is any phone in wrong format
 
@@ -136,3 +136,43 @@ The result shows that:
     UPDATE club_member_info_cleaned 
     SET phone = '999-999-9999'
     WHERE phone NOT LIKE "___-___-____";
+
+- ### "full_address" column
+
+#### Check whether there is any blank cell
+
+    SELECT *
+    FROM club_member_info_cleaned
+    WHERE full_address = "";
+    
+The result shows that data in "full_address" is okay
+
+- ### "job_title" column
+
+#### Check whether there is any blank cell
+
+    SELECT COUNT(job_title) AS 'Job title blank cells'
+    FROM club_member_info_cleaned
+    WHERE job_title = "";
+
+The result:
+
+|Job title blank cells|
+|---------------------|
+|39|
+
+#### Update the job title as "NULL"
+
+    UPDATE club_member_info_cleaned 
+    SET job_title = 'NULL'
+    WHERE job_title ="";
+
+- ### "membership_date" column
+
+#### Check whether there is any blank cell
+
+    SELECT *
+    FROM club_member_info_cleaned
+    WHERE membership_date = "";
+    
+The result shows that data in "membership_date" is okay
