@@ -87,8 +87,12 @@ Let's generate a new table where we can manipulate and restructure the data with
 Result:
 |martial_status|count(full_name)|
 |--------------|----------------|
-||20|
-|divorced|449|
+<mark>||20|<mark>
+<mark>|divorced|449|<mark>
 |divored|4|
 |married|881|
 |single|656|
+
+we can see that: 
+- there is wrong martial status "divored", we have to change into "divorced"
+- 20 cells are blanks, we will update with the most frequence status which is "married"
