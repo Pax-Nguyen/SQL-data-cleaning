@@ -75,3 +75,20 @@ Let's generate a new table where we can manipulate and restructure the data with
     UPDATE club_member_info_cleaned 
     SET age = 42
     WHERE age > 100;
+
+### 'martial_status' column
+
+#### Check the frequency of the martial status
+
+    select martial_status, count(full_name)
+    from club_member_info_cleaned
+    group by martial_status ;
+    
+Result:
+|martial_status|count(full_name)|
+|--------------|----------------|
+||20|
+|divorced|449|
+|divored|4|
+|married|881|
+|single|656|
