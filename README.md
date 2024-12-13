@@ -54,7 +54,7 @@ Let's generate a new table where we can manipulate and restructure the data with
     UPDATE club_member_info_cleaned 
     SET full_name = UPPER(full_name);
     
-#### 'age' column
+### 'age' column
 
 #### Find ages out of the realistic range
 
