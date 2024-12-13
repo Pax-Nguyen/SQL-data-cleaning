@@ -80,9 +80,9 @@ Let's generate a new table where we can manipulate and restructure the data with
 
 #### Check the frequency of the martial status
 
-    select martial_status, count(full_name)
-    from club_member_info_cleaned
-    group by martial_status ;
+    SELECT martial_status, COUNT(full_name)
+    FROM club_member_info_cleaned
+    GROUP BY martial_status ;
     
 Result:
 |martial_status|count(full_name)|
