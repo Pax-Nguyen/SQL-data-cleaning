@@ -108,3 +108,31 @@ we can see that:
     UPDATE club_member_info_cleaned 
     SET martial_status = 'married'
     WHERE martial_status = "";
+
+### 'email' column
+
+#### Check if there is any email in wrong format
+
+    SELECT *
+    FROM club_member_info_cleaned
+    WHERE email NOT LIKE '%@%';
+
+The result is that there is no email in wrong format, so "email" column is okay.
+
+### 'phone' column
+
+#### Check whether there is any phone in wrong format
+
+    SELECT *
+    FROM club_member_info_cleaned
+    WHERE phone NOT LIKE "___-___-____";
+
+The result shows that:
+- there are wrong format phones
+- blank cells
+
+#### Update the wrong phone number by 999-999-9999
+
+    UPDATE club_member_info_cleaned 
+    SET phone = '999-999-9999'
+    WHERE phone NOT LIKE "___-___-____";
