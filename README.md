@@ -87,12 +87,24 @@ Let's generate a new table where we can manipulate and restructure the data with
 Result:
 |martial_status|count(full_name)|
 |--------------|----------------|
-<mark>||20|<mark>
-<mark>|divorced|449|<mark>
+||20|
+|divorced|449|
 |divored|4|
 |married|881|
 |single|656|
 
 we can see that: 
-- there is wrong martial status "divored", we have to change into "divorced"
+- there is wrong martial status "divored", we have to correct the name to "divorced"
 - 20 cells are blanks, we will update with the most frequence status which is "married"
+
+#### Correct the martial status name
+
+    UPDATE club_member_info_cleaned 
+    SET martial_status = 'divorced'
+    WHERE martial_status ='divored';
+
+#### Update the blank cells
+
+    UPDATE club_member_info_cleaned 
+    SET martial_status = 'married'
+    WHERE martial_status = "";
