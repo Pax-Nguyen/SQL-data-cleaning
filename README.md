@@ -42,7 +42,7 @@ Let's generate a new table where we can manipulate and restructure the data with
 
 ## Data cleaning
 
-### 'full_name' column
+- ### 'full_name' column
 
 #### Cleaning whitespace
 
